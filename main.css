@@ -1,0 +1,170 @@
+
+*{
+    font-family:arial;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding-top:30px;
+}
+
+.flex{
+    display:flex;
+}
+
+.flex-wrap{
+    flex-wrap:wrap;
+}
+
+/*Mobile version*/
+
+.hamburger-icon{
+    width:50px;
+    height:50px;
+    display:block;
+    margin:10px auto 0 auto;
+    background:url("../img/ham-icon.png");
+    background-size:cover;
+}
+
+.status-nav{
+    height: 30px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    background: linear-gradient(white,#acacac);
+    width: 100%;
+}
+
+.status-nav ul{
+    font-size:0.9rem;
+    display:flex;
+    list-style:none;
+    padding: 0;
+    margin: 0;
+    color:blue;
+}
+
+.status-nav ul li{
+    text-align: center;
+    padding: .5rem;
+}
+
+.aside-nav{
+    width: 100%;
+    background: linear-gradient(#acacac, white);
+    display:none;
+}
+
+.aside-nav ul{
+    list-style:none;
+    padding: 0;
+}
+
+.aside-nav ul li{
+    text-align:center;
+    border-bottom:1px solid #999;
+    cursor:pointer;
+}
+
+.aside-nav ul li:last-of-type{
+    border:none;
+}
+
+.aside-nav ul .aside-header{
+    font-size:18px;
+    margin:0;
+    margin-bottom:15px;
+}
+
+main{
+    padding:15px;
+}
+
+.content-wrapper{
+    border:2px solid #acacac;
+    border-radius:5px;
+    box-shadow:5px 5px 5px #797979;
+    padding:15px;
+    margin-bottom:15px;
+}
+
+.content-wrapper img{
+    width:50px;
+}
+
+.content-wrapper h2{
+    font-size:16px;
+}
+
+.content-wrapper p{
+    font-size:14px;
+    font-style:italic;
+}
+
+/*-----*/
+
+@media only screen and (min-width: 768px){
+    main{
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .content-wrapper{
+        flex-basis: 49%;
+        flex-shrink: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    body{
+        padding-top:50px;
+    }
+
+    .hamburger-icon{
+        display:none;
+    }
+
+    .aside-nav{
+        width: 20%;
+        position: fixed;
+        left: 0;
+        display:block;
+    }
+
+    .pl-lg-20p{
+        padding-left:20%;
+    }
+
+    .status-nav{
+        height: 50px;
+        position:fixed;
+        top:0;
+        display: flex;
+        justify-content: flex-end;
+        background:linear-gradient(white,#acacac);
+        width:100%;
+    }
+    
+    .status-nav ul{
+        height:75px;
+        display:flex;
+        list-style:none;
+        padding: 0;
+        margin: 0;
+        color:blue;
+    }
+    
+    .status-nav ul li{
+        text-align:center;
+        padding:15px;
+    }
+
+    .content-wrapper{
+        flex-basis: 100%;
+    }
+}
